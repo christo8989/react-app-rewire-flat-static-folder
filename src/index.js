@@ -1,16 +1,16 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function rewireFlatStaticFolder(config, env) {
-  const cssFilenameTemplate = 'static/[name].[contenthash:8].css'
-  const jsFilenameTemplate = 'static/[name].[contenthash:8].js'
-  const mediaFilenameTemplate = 'static/[name].[contenthash:8].[ext]'
+  const cssFilenameTemplate = 'static/[name].[contenthash:8].css';
+  const jsFilenameTemplate = 'static/[name].[contenthash:8].js';
+  const mediaFilenameTemplate = 'static/[name].[contenthash:8].[ext]';
 
   const plugins = ((config && config.plugins) || []).map((a) => {
     if (a instanceof MiniCssExtractPlugin) {
       return new MiniCssExtractPlugin({
         ...a.options,
         filename: cssFilenameTemplate,
-        chunkFilename: cssFilenameTemplate
+        chunkFilename: cssFilenameTemplate,
       });
     }
 
@@ -51,12 +51,12 @@ function rewireFlatStaticFolder(config, env) {
     output: {
       ...config.output,
       filename: jsFilenameTemplate,
-      chunkFilename: jsFilenameTemplate
+      chunkFilename: jsFilenameTemplate,
     },
     plugins,
     module: {
       ...config.module,
-      rules
+      rules,
     },
   };
 }
