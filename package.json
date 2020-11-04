@@ -1,0 +1,45 @@
+{
+  "name": "react-app-rewire-flat-static-folder",
+  "version": "1.0.0",
+  "description": "Update the create-react-app build to output a folderless set of static assets.",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prebuild": "rimraf dist",
+    "build": "babel index.js --out-dir dist --ignore '*.test.js'",
+    "test": "jest .",
+    "prettier": "prettier --write --single-quote --trailing-comma all '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christo8989/react-app-rewire-flat-static-folder.git"
+  },
+  "keywords": [
+    "react-app-rewired",
+    "react-app-rewired-flat-static-folder",
+    "react"
+  ],
+  "author": "Chris Jeffery",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/christo8989/react-app-rewire-flat-static-folder/issues"
+  },
+  "homepage": "https://github.com/christo8989/react-app-rewire-flat-static-folder#readme",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --trailing-comma all",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "mini-css-extract-plugin": "^1.2.1"
+  }
+}
