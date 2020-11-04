@@ -1,14 +1,14 @@
 {
   "name": "react-app-rewire-flat-static-folder",
   "version": "1.0.0",
-  "description": "Update the create-react-app build to output a folderless set of static assets.",
-  "main": "index.js",
+  "description": "Flatten the static folder from the react build from create-react-app with react-app-rewired.",
+  "main": "dist/index.js",
   "scripts": {
     "precommit": "lint-staged",
     "prebuild": "rimraf dist",
-    "build": "babel index.js --out-dir dist --ignore '*.test.js'",
+    "build": "babel src --out-dir dist --ignore '*.test.js'",
     "test": "jest .",
-    "prettier": "prettier --write --single-quote --trailing-comma all '**/*.js'"
+    "prettier": "prettier --write --single-quote --trailing-comma all 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
