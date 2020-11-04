@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-flat-static-folder",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha2",
   "description": "Flatten the static folder from the react build from create-react-app with react-app-rewired.",
   "main": "dist/index.js",
   "scripts": {
