@@ -25,12 +25,6 @@
     "url": "https://github.com/christo8989/react-app-rewire-flat-static-folder/issues"
   },
   "homepage": "https://github.com/christo8989/react-app-rewire-flat-static-folder#readme",
-  "lint-staged": {
-    "*.js": [
-      "prettier --write --single-quote --trailing-comma all",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
