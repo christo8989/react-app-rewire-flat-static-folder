@@ -24,9 +24,9 @@ function rewireFlatStaticFolder(config, env) {
           oneOf: a.oneOf.map((b) => {
             if (
               b &&
-              b.loader &&
-              (b.loader.indexOf('url-loader') >= 0 ||
-                b.loader.indexOf('file-loader') >= 0)
+              typeof b.loader === 'string' &&
+              (b.loader.includes('url-loader') ||
+                b.loader.includes('file-loader'))
             ) {
               return {
                 ...b,
